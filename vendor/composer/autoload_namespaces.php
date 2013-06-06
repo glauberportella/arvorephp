@@ -10,6 +10,7 @@ return array(
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
     'Doctrine\\ORM' => array($vendorDir . '/doctrine/orm/lib'),
     'Doctrine\\DBAL' => array($vendorDir . '/doctrine/dbal/lib'),
+    'Doctrine\\Common\\DataFixtures' => array($vendorDir . '/doctrine/data-fixtures/lib'),
     'Doctrine\\Common' => array($vendorDir . '/doctrine/common/lib'),
     'DoctrineExtensions' => array($vendorDir . '/doctrine2-nestedset/lib/DoctrineExtensions'),
     '' => array($baseDir . '/src'),

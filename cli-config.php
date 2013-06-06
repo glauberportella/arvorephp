@@ -1,5 +1,4 @@
 <?php
-// cli-config.php
 require_once "app/bootstrap.php";
 
 $em = \Doctrine\ORM\EntityManager::create(Project::$conn, Project::$config);
