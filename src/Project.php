@@ -9,9 +9,17 @@ use Doctrine\ORM\Tools\Setup;
  */
 class Project {
 	const ENV = 'dev'; // dev, prod, test
+
+	// database configuration parameters
+	public static $conn = array(
+			'driver'	=> 'pdo_mysql',
+			'host'		=> 'localhost',
+			'dbname'	=> 'arvorephp',
+			'user'		=> 'root',
+			'password'	=> 'devgp12'
+		);
 	
 	public static $config;
-	public static $conn;
 	
 	public static function setup()
 	{
@@ -19,18 +27,6 @@ class Project {
 		// or if you prefer yaml or XML
 		//$config = Setup::createXMLMetadataConfiguration(array(__DIR__."/../config/xml"), self::ENV === 'dev');
 		//$config = Setup::createYAMLMetadataConfiguration(array(__DIR__."/../config/yml"), self::ENV === 'dev');
-
-		// database configuration parameters
-		self::$conn = array(
-			'driver'	=> 'pdo_mysql',
-			'host'		=> 'localhost',
-			'dbname'	=> 'arvore',
-			'user'		=> 'root',
-			'password'	=> 'devgp12'
-		);
-
-		// obtaining the entity manager
-		// $entityManager = EntityManager::create(self::$conn, self::$config);
 	}
 }
 
