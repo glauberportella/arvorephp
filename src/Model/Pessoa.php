@@ -3,12 +3,13 @@ namespace Arvore\Model;
 
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\Table;
+use DoctrineExtensions\NestedSet\Node;
 
 /**
  * @Entity
  * @Table(name="pessoa")
  */
-class Pessoa
+class Pessoa implements Node
 {
 	/**
 	 * @Id
@@ -47,6 +48,23 @@ class Pessoa
 	 */
 	protected $telefone;
 	
+	/** NestedSet specific fields *************************************************/
+	/**
+	 * @Column(type="integer")
+	 */
+	protected $root;
+
+	/**
+     * @Column(type="integer")
+     */
+    protected $lft;
+
+    /**
+     * @Column(type="integer")
+     */
+    protected $rgt;
+    /** End NestedSet specific fields *********************************************/
+
 	/**
 	 * Get ID
 	 * @return integer
@@ -126,4 +144,17 @@ class Pessoa
 		$this->telefone = $telefone;
 		return $this;
 	}
+
+	public function __toString()
+	{
+		return $this->nome;
+	}
+
+	/** NestedSet specific accessors ******************************************************/
+	public function getRootValue() { return $this->root; }
+	public function setRootValue($root) { $this->root = $root; }
+	public function getLeftValue() { return $this->lft; }
+    public function setLeftValue($lft) { $this->lft = $lft; }
+    public function getRightValue() { return $this->rgt; }
+    public function setRightValue($rgt) { $this->rgt = $rgt; }
 }

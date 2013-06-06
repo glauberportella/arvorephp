@@ -8,7 +8,10 @@
         }
     ],
 	"autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": {
+            "": "src/",
+            "DoctrineExtensions": "vendor/doctrine2-nestedset/lib/DoctrineExtensions/"
+        }
     },
     "require": {
 		"doctrine/orm": "2.*",
