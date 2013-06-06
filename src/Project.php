@@ -24,8 +24,8 @@ class Project {
 		self::$conn = array(
 			'driver'	=> 'pdo_mysql',
 			'host'		=> 'localhost',
-			'database'	=> 'arvore',
-			'username'	=> 'root',
+			'dbname'	=> 'arvore',
+			'user'		=> 'root',
 			'password'	=> 'devgp12'
 		);
 
@@ -33,3 +33,5 @@ class Project {
 		// $entityManager = EntityManager::create(self::$conn, self::$config);
 	}
 }
+
+Project::setup();
