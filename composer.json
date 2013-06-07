@@ -10,7 +10,7 @@
 	"autoload": {
         "psr-0": {
             "": "src/",
-            "DoctrineExtensions": "vendor/doctrine2-nestedset/lib/DoctrineExtensions/"
+            "DoctrineExtensions": "vendor/doctrine2-nestedset/lib/"
         }
     },
     "require": {

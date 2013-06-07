@@ -24,7 +24,7 @@ class Project {
 	
 	public static function setup()
 	{
-		self::$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/../src"), self::ENV === 'dev');
+		self::$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/Model"), self::ENV === 'dev');
 		// or if you prefer yaml or XML
 		//$config = Setup::createXMLMetadataConfiguration(array(__DIR__."/../config/xml"), self::ENV === 'dev');
 		//$config = Setup::createYAMLMetadataConfiguration(array(__DIR__."/../config/yml"), self::ENV === 'dev');

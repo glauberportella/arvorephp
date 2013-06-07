@@ -12,6 +12,6 @@ return array(
     'Doctrine\\DBAL' => array($vendorDir . '/doctrine/dbal/lib'),
     'Doctrine\\Common\\DataFixtures' => array($vendorDir . '/doctrine/data-fixtures/lib'),
     'Doctrine\\Common' => array($vendorDir . '/doctrine/common/lib'),
-    'DoctrineExtensions' => array($vendorDir . '/doctrine2-nestedset/lib/DoctrineExtensions'),
+    'DoctrineExtensions' => array($vendorDir . '/doctrine2-nestedset/lib'),
     '' => array($baseDir . '/src'),
 );

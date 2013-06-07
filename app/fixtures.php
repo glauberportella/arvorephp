@@ -10,7 +10,6 @@
 require_once 'bootstrap.php';
 
 use Arvore\Project;
-use Arvore\Fixtures\LoadArvoreData;
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;
 use Doctrine\Common\DataFixtures\Loader;
 use Doctrine\Common\DataFixtures\Purger\ORMPurger;
