@@ -9,6 +9,7 @@
 
 require_once 'bootstrap.php';
 
+use Arvore\Fixtures\LoadArvoreData;
 use Arvore\Project;
 use Doctrine\Common\DataFixtures\Executor\ORMExecutor;
 use Doctrine\Common\DataFixtures\Loader;
@@ -16,7 +17,8 @@ use Doctrine\Common\DataFixtures\Purger\ORMPurger;
 use Doctrine\ORM\EntityManager;
 
 $loader = new Loader();
-$loader->loadFromDirectory(__DIR__.'/../src/Arvore/Fixtures');
+//$loader->loadFromDirectory(__DIR__.'/../src/Arvore/Fixtures');
+$loader->addFixture(new LoadArvoreData());
 
 $em = EntityManager::create(Project::$conn, Project::$config);
 $purger = new ORMPurger();

@@ -3,13 +3,13 @@ namespace Arvore\Model;
 
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\Table;
-use DoctrineExtensions\NestedSet\Node;
+use DoctrineExtensions\NestedSet\MultipleRootNode;
 
 /**
  * @Entity
  * @Table(name="pessoa")
  */
-class Pessoa implements Node
+class Pessoa implements MultipleRootNode
 {
 	/**
 	 * @Id
