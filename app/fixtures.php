@@ -17,8 +17,7 @@ use Doctrine\Common\DataFixtures\Purger\ORMPurger;
 use Doctrine\ORM\EntityManager;
 
 $loader = new Loader();
-//$loader->loadFromDirectory(__DIR__.'/../src/Arvore/Fixtures');
-$loader->addFixture(new LoadArvoreData());
+$loader->loadFromDirectory(__DIR__.'/../src/Arvore/Fixtures');
 
 $em = EntityManager::create(Project::$conn, Project::$config);
 $purger = new ORMPurger();
