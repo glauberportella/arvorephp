@@ -16,6 +16,7 @@
     "require": {
 		"doctrine/orm": "2.*",
         "doctrine/data-fixtures": "dev-master",
-        "symfony/yaml": "2.*"
+        "symfony/yaml": "2.*",
+        "twig/twig": "1.*"
     }
 }

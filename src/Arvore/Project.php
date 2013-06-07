@@ -10,6 +10,8 @@ use Doctrine\ORM\Tools\Setup;
  */
 class Project {
 	const ENV = 'dev'; // dev, prod, test
+	const TEMPLATE_PATH = 'View';
+	const TEMPLATE_CACHE_PATH = '../../app/cache';
 
 	// database configuration parameters
 	public static $conn = array(
@@ -17,11 +19,11 @@ class Project {
 			'host'		=> 'localhost',
 			'dbname'	=> 'arvorephp',
 			'user'		=> 'root',
-			'password'	=> 'devgp12'
+			'password'	=> ''
 		);
-	
+
 	public static $config;
-	
+
 	public static function setup()
 	{
 		self::$config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/Model"), self::ENV === 'dev');
